@@ -1,0 +1,11 @@
+U 
+&#x0;&#x0;&#x0;&#x0;�^]f^&#x0;&#x0;�&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;@&#x0;&#x0;&#x0;s�&#x0;&#x0;&#x0;d&#x0;Z&#x0;ddlmZ&#x0;ddlmZ&#x0;ddlmZmZmZm        Z        &#x0;ddl
+mZmZ&#x0;ddlZee �Ze�e�&#x0;eeddd        iid
+�&#x0;e�d�ed�d d��Ze dkr�edd�Zedd�Zejeed�&#x0;dS&#x0;)z
+Route module for the API
+�&#x0;&#x0;&#x0;&#x0;)�getenv)�        app_views)�Flask�jsonify�abort�request)�CORS�cross_originNz        /api/v1/*Zorigins�*)Z        resources�&#x0;&#x0;)�returnc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;t&#x0;ddi�dfS&#x0;)z Not found handler
+    �errorz        Not foundr&#x0;&#x0;&#x0;)r&#x0;&#x0;&#x0;)r &#x0;&#x0;&#x0;�&#x0;r&#x0;&#x0;&#x0;�>/alx-backend-user-data/0x01-Basic_authentication/api/v1/app.py�        not_found&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�__main__ZAPI_HOSTz0.0.0.0ZAPI_PORTZ5000)�host�port)�__doc__�osr&#x0;&#x0;&#x0;Zapi.v1.viewsr&#x0;&#x0;&#x0;Zflaskr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;Z
+flask_corsr&#x0;&#x0;&#x0;r        &#x0;&#x0;&#x0;�__name__ZappZregister_blueprintZerrorhandler�strr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�runr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�<module>&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;
+
+
+

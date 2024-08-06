@@ -1,0 +1,11 @@
+U 
+&#x0;&#x0;&#x0;&#x0;�^]fJ&#x0;&#x0;�&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;@&#x0;&#x0;&#x0;s`&#x0;&#x0;&#x0;d&#x0;Z&#x0;ddlmZmZ&#x0;ddlmZ&#x0;ejddgdd�ed�d        d
+��Zejddd�ed�d d��Z        dS&#x0;)z Module of Index views
+�&#x0;&#x0;&#x0;&#x0;)�jsonify�abort)�        app_viewsz/status�GETF)�methods�strict_slashes)�returnc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;t&#x0;ddi�S&#x0;)zB GET /api/v1/status
+    Return:
+      - the status of the API
+    �status�OK)r&#x0;&#x0;&#x0;�&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�F/alx-backend-user-data/0x01-Basic_authentication/api/v1/views/index.pyr        &#x0;&#x0;&#x0;&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;r        &#x0;&#x0;&#x0;z/stats/)r&#x0;&#x0;&#x0;c&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s$&#x0;&#x0;&#x0;ddl&#x0;m}&#x0;&#x0;i&#x0;}|&#x0;��&#x0;|d<&#x0;t|�S&#x0;)zF GET /api/v1/stats
+    Return:
+      - the number of each objects
+    r&#x0;&#x0;&#x0;)�UserZusers)Zmodels.userr &#x0;&#x0;&#x0;�countr&#x0;&#x0;&#x0;)r &#x0;&#x0;&#x0;�statsr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;N)
+�__doc__�flaskr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�api.v1.viewsr&#x0;&#x0;&#x0;�route�strr        &#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�<module>&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;

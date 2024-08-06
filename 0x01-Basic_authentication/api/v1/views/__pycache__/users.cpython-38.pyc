@@ -1,0 +1,63 @@
+U 
+&#x0;&#x0;&#x0;&#x0;�^]fR &#x0;&#x0;�&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;@&#x0;&#x0;&#x0;s�&#x0;&#x0;&#x0;d&#x0;Z&#x0;ddlmZ&#x0;ddlmZmZmZ&#x0;ddlmZ&#x0;ej        ddgdd�e
+d        �d
+d��Zej        ddgdd�de
+e
+d�dd��Zej        ddgdd�de
+e
+d�dd��Z ej        ddgdd�e
+d        �dd��Zej        ddgdd�de
+e
+d�dd��Zd S&#x0;)z Module of Users views
+�&#x0;&#x0;&#x0;&#x0;)�        app_views)�abort�jsonify�request)�Userz/users�GETF)�methods�strict_slashes)�returnc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;dd�&#x0;t&#x0;��&#x0;D&#x0;�}&#x0;t|&#x0;�S&#x0;)zU GET /api/v1/users
+    Return:
+      - list of all User objects JSON represented
+    c&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;S&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;g&#x0;|&#x0;]}|�&#x0;�&#x0;�qS&#x0;�&#x0;)�to_json)�.0�userr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�F/alx-backend-user-data/0x01-Basic_authentication/api/v1/views/users.py�
+<listcomp>&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;&#x0;z"view_all_users.<locals>.<listcomp>)r&#x0;&#x0;&#x0;�allr&#x0;&#x0;&#x0;)Z        all_usersr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�view_all_users        &#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;z/users/<user_id>N)�user_idr
+&#x0;&#x0;&#x0;c&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s6&#x0;&#x0;&#x0;|&#x0;dkrt&#x0;d�&#x0;t�|&#x0;�}|dkr*t&#x0;d�&#x0;t|��&#x0;�S&#x0;)z� GET /api/v1/users/:id
+    Path parameter:
+      - User ID
+    Return:
+      - User object JSON represented
+      - 404 if the User ID doesn't exist
+    N�&#x0;&#x0;)r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�getr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;� view_one_user&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;        
+r&#x0;&#x0;&#x0;�DELETEc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s>&#x0;&#x0;&#x0;|&#x0;dkrt&#x0;d�&#x0;t�|&#x0;�}|dkr*t&#x0;d�&#x0;|��&#x0;&#x0;ti&#x0;�dfS&#x0;)z� DELETE /api/v1/users/:id
+    Path parameter:
+      - User ID
+    Return:
+      - empty JSON is the User has been correctly deleted
+      - 404 if the User ID doesn't exist
+    Nr&#x0;&#x0;&#x0;��&#x0;&#x0;&#x0;)r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�remover&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�delete_user$&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;        
+r&#x0;&#x0;&#x0;�POSTc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;
+&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s&#x0;&#x0;d}&#x0;d}zt&#x0;��&#x0;}&#x0;W&#x0;n&&#x0;tk
+r:&#x0;}&#x0;zd}&#x0;W&#x0;5&#x0;d}~X&#x0;Y&#x0;nX&#x0;|&#x0;dkrHd}|dkrd|&#x0;�dd�dkrdd}|dkr�|&#x0;�dd�dkr�d}|dk�r
+zPt�&#x0;}|&#x0;�d�|_|&#x0;�d�|_|&#x0;�d�|_|&#x0;�d        �|_|�        �&#x0;&#x0;t
+|��&#x0;�d
+fW&#x0;S&#x0;&#x0;tk
+�r&#x0;}&#x0;zd�|�}W&#x0;5&#x0;d}~X&#x0;Y&#x0;nX&#x0;t
+d|i�d fS&#x0;)z� POST /api/v1/users/
+    JSON body:
+      - email
+      - password
+      - last_name (optional)
+      - first_name (optional)
+    Return:
+      - User object JSON represented
+      - 400 if can't create the new User
+    N�Wrong format�email�&#x0;z email missing�passwordzpassword missing�
+first_name�        last_name��&#x0;&#x0;&#x0;zCan't create User: {}�error�&#x0;&#x0;) r&#x0;&#x0;&#x0;�get_json�        Exceptionr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r &#x0;&#x0;&#x0;r!&#x0;&#x0;&#x0;r"&#x0;&#x0;&#x0;�saver&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�format)�rjZ        error_msg�er&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�create_user6&#x0;&#x0;&#x0;s0&#x0;&#x0;&#x0;&#x0;
+r,&#x0;&#x0;&#x0;�PUTc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;
+&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s�&#x0;&#x0;&#x0;|&#x0;dkrt&#x0;d�&#x0;t�|&#x0;�}|dkr*t&#x0;d�&#x0;d}zt��&#x0;}W&#x0;n&&#x0;tk
+r`&#x0;}&#x0;zd}W&#x0;5&#x0;d}~X&#x0;Y&#x0;nX&#x0;|dkrztddi�dfS&#x0;|�d�dk        r�|�d�|_|�d�dk        r�|�d�|_|�        �&#x0;&#x0;t|�
+�&#x0;�dfS&#x0;)        a&#x0;&#x0; PUT /api/v1/users/:id
+    Path parameter:
+      - User ID
+    JSON body:
+      - last_name (optional)
+      - first_name (optional)
+    Return:
+      - User object JSON represented
+      - 404 if the User ID doesn't exist
+      - 400 if can't update the User
+    Nr&#x0;&#x0;&#x0;r$&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r%&#x0;&#x0;&#x0;r!&#x0;&#x0;&#x0;r"&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;)r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&&#x0;&#x0;&#x0;r'&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r!&#x0;&#x0;&#x0;r"&#x0;&#x0;&#x0;r(&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;)r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r*&#x0;&#x0;&#x0;r+&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�update_user\&#x0;&#x0;&#x0;s$&#x0;&#x0;&#x0;&#x0; 
+r.&#x0;&#x0;&#x0;)N)N)N)�__doc__�api.v1.viewsr&#x0;&#x0;&#x0;�flaskr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�models.userr&#x0;&#x0;&#x0;�route�strr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r,&#x0;&#x0;&#x0;r.&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�<module>&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;        %
