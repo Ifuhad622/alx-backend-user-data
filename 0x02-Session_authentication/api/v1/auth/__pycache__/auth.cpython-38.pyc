@@ -1,0 +1,19 @@
+U 
+&#x0;&#x0;&#x0;&#x0;�V`f&#x0;&#x0;�&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;@&#x0;&#x0;&#x0;sB&#x0;&#x0;&#x0;d&#x0;Z&#x0;ddlmZ&#x0;ddlmZmZ&#x0;ddlZddlZG&#x0;dd�&#x0;d�ZdS&#x0;)z#Authentication module for the API.
+�&#x0;&#x0;&#x0;&#x0;)�request)�List�TypeVarNc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;@&#x0;&#x0;&#x0;sZ&#x0;&#x0;&#x0;e&#x0;Zd&#x0;ZdZeee&#x0;ed�dd�Zded�dd�Zde        d        �d�d
+d�Z
+ded�dd �ZdS&#x0;)�AuthzAuthentication class.
+    )�path�excluded_paths�returnc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s�&#x0;&#x0;&#x0;|dk        r�|dk        r�t&#x0;dd�&#x0;|�D&#x0;]d}d}|d&#x0;dkrFd�|dd�&#x0;�}n*|d&#x0;d        krfd
+�|dd�&#x0;�}n
+d
+�|�}t�||�r&#x0;dS&#x0;qdS&#x0;) z2Checks if a path requires authentication.
+        Nc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;S&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;|&#x0;�&#x0;�&#x0;S&#x0;)N)�strip)�x�&#x0;r&#x0;&#x0;&#x0;�F/alx-backend-user-data/0x02-Session_authentication/api/v1/auth/auth.py�<lambda>&#x0;&#x0;&#x0;�&#x0;&#x0;&#x0;&#x0;z#Auth.require_auth.<locals>.<lambda>�&#x0;������*z{}.*r&#x0;&#x0;&#x0;�/z{}/*FT)�map�format�re�match)�selfr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;Zexclusion_path�patternr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�require_auth &#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;
+zAuth.require_authN)r&#x0;&#x0;&#x0;c&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;|dk        r|j&#x0;�dd�S&#x0;dS&#x0;)z>Gets the authorization header field from the request.
+        NZ Authorization)Zheaders�get�r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�authorization_header&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;zAuth.authorization_header�Userc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;dS&#x0;)z0Gets the current user from the request.
+        Nr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�current_user$&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;zAuth.current_userc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s"&#x0;&#x0;&#x0;|dk        rt&#x0;�d�}|j�|�S&#x0;dS&#x0;)z9Gets the value of the cookie named SESSION_NAME.
+        NZSESSION_NAME)�os�getenvZcookiesr&#x0;&#x0;&#x0;)r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;Zcookie_namer&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�session_cookie)&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;
+zAuth.session_cookie)N)N)N)�__name__�
+__module__�__qualname__�__doc__�strr&#x0;&#x0;&#x0;�boolr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r!&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;
+&#x0;&#x0;&#x0;s
+&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;)        r%&#x0;&#x0;&#x0;Zflaskr&#x0;&#x0;&#x0;�typingr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�<module>&#x0;&#x0;&#x0;s
+&#x0;&#x0;&#x0;

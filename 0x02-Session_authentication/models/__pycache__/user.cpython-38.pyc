@@ -1,0 +1,18 @@
+U 
+&#x0;&#x0;&#x0;&#x0;�A`f&#x0;&#x0;�&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;@&#x0;&#x0;&#x0;s,&#x0;&#x0;&#x0;d&#x0;Z&#x0;ddlZddlmZ&#x0;G&#x0;dd�&#x0;de�ZdS&#x0;)z  User module
+�&#x0;&#x0;&#x0;&#x0;N)�Basec&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;sl&#x0;&#x0;&#x0;e&#x0;Zd&#x0;ZdZeed��&#x0;fdd�Zeed�dd��Z        e        j
+ed�d        d��Z        eed
+�dd�Zed�d d�Z �&#x0;&#x0;ZS&#x0;)�Userz User class
+    )�args�kwargsc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;sB&#x0;&#x0;&#x0;t&#x0;�&#x0;j||�&#x0;|�d�|&#x0;_|�d�|&#x0;_|�d�|&#x0;_|�d�|&#x0;_dS&#x0;)z$ Initialize a User instance
+        �email�        _password�
+first_name�        last_nameN)�super�__init__�getr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r        &#x0;&#x0;&#x0;)�selfr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;��        __class__�&#x0;�A/alx-backend-user-data/0x02-Session_authentication/models/user.pyr&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;s
+&#x0;&#x0;&#x0;&#x0;z User.__init__)�returnc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;|&#x0;j&#x0;S&#x0;)z  Getter of the password
+        )r&#x0;&#x0;&#x0;�r &#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�password&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;z User.password)�pwdc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s8&#x0;&#x0;&#x0;|dkst&#x0;|�tk        rd|&#x0;_nt�|��&#x0;���&#x0;��&#x0;|&#x0;_dS&#x0;)z5 Setter of a new password: encrypt in SHA256
+        N)�type�strr&#x0;&#x0;&#x0;�hashlib�sha256�encode�        hexdigest�lower)r &#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;)r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;c&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;sF&#x0;&#x0;&#x0;|dkst&#x0;|�tk        rdS&#x0;|&#x0;jdkr&dS&#x0;|��&#x0;}t�|���&#x0;��&#x0;|&#x0;jkS&#x0;)z Validate a password
+        NF)r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;)r &#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;Zpwd_er&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�is_valid_password$&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;
+zUser.is_valid_passwordc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s�&#x0;&#x0;&#x0;|&#x0;j&#x0;dkr"|&#x0;jdkr"|&#x0;jdkr"dS&#x0;|&#x0;jdkrB|&#x0;jdkrBd�|&#x0;j&#x0;�S&#x0;|&#x0;jdkrXd�|&#x0;j�S&#x0;|&#x0;jdkrnd�|&#x0;j�S&#x0;d�|&#x0;j|&#x0;j�S&#x0;dS&#x0;)z? Display User name based on email/first_name/last_name
+        N�&#x0;z{}z{} {})r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r        &#x0;&#x0;&#x0;�formatr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�display_name.&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;�
+
+zUser.display_name)�__name__�
+__module__�__qualname__�__doc__�list�dictr&#x0;&#x0;&#x0;�propertyr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�setter�boolr&#x0;&#x0;&#x0;r &#x0;&#x0;&#x0;� __classcell__r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;        
+r&#x0;&#x0;&#x0;)r$&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;Zmodels.baser&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�<module>&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;

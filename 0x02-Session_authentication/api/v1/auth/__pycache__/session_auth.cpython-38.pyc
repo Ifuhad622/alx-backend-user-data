@@ -1,0 +1,22 @@
+U 
+&#x0;&#x0;&#x0;&#x0;Rr`f�&#x0;&#x0;�&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;@&#x0;&#x0;&#x0;sH&#x0;&#x0;&#x0;d&#x0;Z&#x0;ddlmZ&#x0;ddlmZ&#x0;ddlmZ&#x0;ddlmZ&#x0;G&#x0;dd�&#x0;de�Z        d        S&#x0;)
+z#API module: Session authentication
+�&#x0;&#x0;&#x0;&#x0;)�uuid4)�request�&#x0;&#x0;&#x0;)�Auth)�Userc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;@&#x0;&#x0;&#x0;sR&#x0;&#x0;&#x0;e&#x0;Zd&#x0;ZdZi&#x0;Zdeed�dd�Zdeed�dd�Zded        �d
+d�Z        ddd �Z
+dS&#x0;)�SessionAuthz"Session authentication class.
+    N)�user_id�returnc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s(&#x0;&#x0;&#x0;t&#x0;|�tkr$tt�&#x0;�}||&#x0;j|<&#x0;|S&#x0;dS&#x0;)z+Creates a session id for the user.
+        N)�type�strr&#x0;&#x0;&#x0;�user_id_by_session_id)�selfr&#x0;&#x0;&#x0;�
+session_id�&#x0;r&#x0;&#x0;&#x0;�N/alx-backend-user-data/0x02-Session_authentication/api/v1/auth/session_auth.py�create_session&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;
+
+zSessionAuth.create_session)r&#x0;&#x0;&#x0;r        &#x0;&#x0;&#x0;c&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;t&#x0;|�tkr|&#x0;j�|�S&#x0;dS&#x0;)zVRetrieves the user id of the user associated with
+        a given session id.
+        N)r
+&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�get)r &#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�user_id_for_session_id&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;z"SessionAuth.user_id_for_session_id)r        &#x0;&#x0;&#x0;c&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;|&#x0;�&#x0;|&#x0;�|��}t�|�S&#x0;)z8Retrieves the user associated with the request.
+        )r&#x0;&#x0;&#x0;�session_cookier&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;)r &#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�current_user&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;zSessionAuth.current_userc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;sF&#x0;&#x0;&#x0;|&#x0;�&#x0;|�}|&#x0;�|�}|dks,|dks,|dkr0dS&#x0;||&#x0;jkrB|&#x0;j|=&#x0;dS&#x0;)z+Destroys an authenticated session.
+        NFT)r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;)r &#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�destroy_session%&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;
+
+
+zSessionAuth.destroy_session)N)N)N)N)�__name__�
+__module__�__qualname__�__doc__r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;N)
+r&#x0;&#x0;&#x0;�uuidr&#x0;&#x0;&#x0;�flaskr&#x0;&#x0;&#x0;�authr&#x0;&#x0;&#x0;�models.userr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�<module>&#x0;&#x0;&#x0;s
+&#x0;&#x0;&#x0;

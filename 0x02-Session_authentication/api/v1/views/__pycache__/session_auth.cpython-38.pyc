@@ -1,0 +1,20 @@
+U 
+&#x0;&#x0;&#x0;&#x0;�b`f�&#x0;&#x0;�&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;@&#x0;&#x0;&#x0;s�&#x0;&#x0;&#x0;d&#x0;Z&#x0;ddlmZ&#x0;ddlZddlmZmZmZ&#x0;ddlm        Z        &#x0;ddl
+mZ&#x0;ejddgd        d
+�ee ef&#x0;d�dd ��Zejddgd        d
+�ee ef&#x0;d�dd��ZdS&#x0;)z%Module: session authenticating views
+�&#x0;&#x0;&#x0;&#x0;)�TupleN)�abort�jsonify�request)�User)�        app_viewsz/auth_session/login�POSTF)�methods�strict_slashes)�returnc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s"&#x0;&#x0;ddi}&#x0;t&#x0;j�d�}|dks,t|��&#x0;�dkr<tddi�dfS&#x0;t&#x0;j�d�}|dks`t|��&#x0;�dkrptdd        i�dfS&#x0;zt�d|i�}W&#x0;n &#x0;tk
+r�&#x0;&#x0;&#x0;t|&#x0;�d
+f&#x0;Y&#x0;S&#x0;X&#x0;t|�dkr�t|&#x0;�d
+fS&#x0;|d&#x0;�        |��rddl
+m}&#x0;|�t |d&#x0;d��}t|d&#x0;��&#x0;�}|�t�d �|�&#x0;|S&#x0;tddi�dfS&#x0;)z^POST /api/v1/auth_session/login
+    Return:
+      - JSON representation of a User object.
+    �errorzno user found for this email�emailNr&#x0;&#x0;&#x0;z email missingi�&#x0;&#x0;�passwordzpassword missing�&#x0;&#x0;��auth�idZSESSION_NAMEzwrong passwordi�&#x0;&#x0;)r&#x0;&#x0;&#x0;�form�get�len�stripr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�search�        Exception�is_valid_password�
+api.v1.appr&#x0;&#x0;&#x0;Zcreate_session�getattr�to_json�
+set_cookie�os�getenv)Z not_found_resr &#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�usersr&#x0;&#x0;&#x0;Zsessiond_id�res�&#x0;r"&#x0;&#x0;&#x0;�O/alx-backend-user-data/0x02-Session_authentication/api/v1/views/session_auth.py�login&#x0;&#x0;&#x0;s(&#x0;&#x0;&#x0;&#x0;r$&#x0;&#x0;&#x0;z/auth_session/logout�DELETEc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s*&#x0;&#x0;&#x0;ddl&#x0;m}&#x0;&#x0;|&#x0;�t�}|s"td�&#x0;ti&#x0;�S&#x0;)zQDELETE /api/v1/auth_session/logout
+    Return:
+      - An empty JSON object.
+    r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;)r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;Zdestroy_sessionr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;)r&#x0;&#x0;&#x0;Zis_destroyedr"&#x0;&#x0;&#x0;r"&#x0;&#x0;&#x0;r#&#x0;&#x0;&#x0;�logout'&#x0;&#x0;&#x0;s
+&#x0;&#x0;&#x0;&#x0;
+r&&#x0;&#x0;&#x0;)�__doc__�typingr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�flaskr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�models.userr&#x0;&#x0;&#x0;�api.v1.viewsr&#x0;&#x0;&#x0;�route�str�intr$&#x0;&#x0;&#x0;r&&#x0;&#x0;&#x0;r"&#x0;&#x0;&#x0;r"&#x0;&#x0;&#x0;r"&#x0;&#x0;&#x0;r#&#x0;&#x0;&#x0;�<module>&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;&#x0;�

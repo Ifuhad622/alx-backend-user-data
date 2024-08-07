@@ -1,0 +1,17 @@
+U 
+&#x0;&#x0;&#x0;&#x0;�A`f�&#x0;&#x0;�&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;@&#x0;&#x0;&#x0;s�&#x0;&#x0;&#x0;d&#x0;Z&#x0;ddlmZmZ&#x0;ddlmZ&#x0;ejddgdd�ed�d        d
+��Zejddd�ed�d d��Z        ejddd�dd�dd��Z
+ejddd�dd�dd��ZdS&#x0;)z Module of Index views
+�&#x0;&#x0;&#x0;&#x0;)�jsonify�abort)�        app_viewsz/status�GETF)�methods�strict_slashes)�returnc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;t&#x0;ddi�S&#x0;)zB GET /api/v1/status
+    Return:
+      - the status of the API
+    �status�OK)r&#x0;&#x0;&#x0;�&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�H/alx-backend-user-data/0x02-Session_authentication/api/v1/views/index.pyr        &#x0;&#x0;&#x0;&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;r        &#x0;&#x0;&#x0;z/stats/)r&#x0;&#x0;&#x0;c&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s$&#x0;&#x0;&#x0;ddl&#x0;m}&#x0;&#x0;i&#x0;}|&#x0;��&#x0;|d<&#x0;t|�S&#x0;)zF GET /api/v1/stats
+    Return:
+      - the number of each objects
+    r&#x0;&#x0;&#x0;)�UserZusers)Zmodels.userr &#x0;&#x0;&#x0;�countr&#x0;&#x0;&#x0;)r &#x0;&#x0;&#x0;�statsr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;z/unauthorized/Nc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;t&#x0;d�&#x0;dS&#x0;)zEGET /api/v1/unauthorized
+    Return:
+      - Unauthorized error.
+    i�&#x0;&#x0;N�r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�unauthorized&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;z/forbidden/c&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;t&#x0;d�&#x0;dS&#x0;)z?GET /api/v1/forbidden
+    Return:
+      - Forbidden error.
+    i�&#x0;&#x0;Nr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�        forbidden&&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;)�__doc__�flaskr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�api.v1.viewsr&#x0;&#x0;&#x0;�route�strr        &#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�<module>&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;

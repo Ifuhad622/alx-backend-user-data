@@ -1,0 +1,45 @@
+U 
+&#x0;&#x0;&#x0;&#x0;�A`f�&#x0;&#x0;�&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;@&#x0;&#x0;&#x0;sZ&#x0;&#x0;&#x0;d&#x0;Z&#x0;ddlmZ&#x0;ddlmZmZmZ&#x0;ddlmZ&#x0;ddlZddl        Z        dZ
+i&#x0;ZG&#x0;dd�&#x0;d�ZdS&#x0;)        z  Base module
+�&#x0;&#x0;&#x0;&#x0;)�datetime)�TypeVar�List�Iterable)�pathNz%Y-%m-%dT%H:%M:%Sc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;@&#x0;&#x0;&#x0;s�&#x0;&#x0;&#x0;e&#x0;Zd&#x0;ZdZeed�dd�Zed&#x0;�ed�dd�Z        d eed        �d
+d�Z
+edd �&#x0;�Zedd�&#x0;�Z dd�&#x0;Zdd�&#x0;Zeed�dd��Zeeed&#x0;�&#x0;d�dd��Zeeed&#x0;�d�dd��Zei&#x0;feeed&#x0;�&#x0;d�dd��ZdS&#x0;)!�Basez Base class
+    )�args�kwargsc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;O&#x0;&#x0;&#x0;s�&#x0;&#x0;&#x0;t&#x0;|&#x0;jj�}t�|�dkr"i&#x0;t|<&#x0;|�dt&#x0;t��&#x0;��|&#x0;_|�d�dk        r\t�        |�d�t
+�|&#x0;_n
+t��&#x0;|&#x0;_|�d�dk        r�t�        |�d�t
+�|&#x0;_ n
+t��&#x0;|&#x0;_ dS&#x0;)z$ Initialize a Base instance
+        N�id�
+created_at�
+updated_at)�str�        __class__�__name__�DATA�get�uuidZuuid4r
+&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�strptime�TIMESTAMP_FORMATr&#x0;&#x0;&#x0;�utcnowr&#x0;&#x0;&#x0;)�selfr&#x0;&#x0;&#x0;r        &#x0;&#x0;&#x0;�s_class�&#x0;r&#x0;&#x0;&#x0;�A/alx-backend-user-data/0x02-Session_authentication/models/base.py�__init__&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;�
+�z Base.__init__)�other�returnc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s.&#x0;&#x0;&#x0;t&#x0;|&#x0;�t&#x0;|�krdS&#x0;t|&#x0;t�s"dS&#x0;|&#x0;j|jkS&#x0;)z Equality
+        F)�type�
+isinstancer&#x0;&#x0;&#x0;r
+&#x0;&#x0;&#x0;)r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�__eq__&&#x0;&#x0;&#x0;s
+&#x0;&#x0;&#x0;&#x0;
+zBase.__eq__F)�for_serializationr&#x0;&#x0;&#x0;c&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;sR&#x0;&#x0;&#x0;i&#x0;}|&#x0;j&#x0;��&#x0;D&#x0;]>\}}|s(|d&#x0;dkr(qt|�tkrD|�t�||<&#x0;q|||<&#x0;q|S&#x0;)z. Convert the object a JSON dictionary
+        r&#x0;&#x0;&#x0;�_)�__dict__�itemsr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�strftimer&#x0;&#x0;&#x0;)r&#x0;&#x0;&#x0;r &#x0;&#x0;&#x0;�result�key�valuer&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�to_json/&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;
+zBase.to_jsonc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;        &#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;sn&#x0;&#x0;&#x0;|&#x0;j&#x0;}d�|�}i&#x0;t|<&#x0;t�|�s&dS&#x0;t|d��4}t�|�}|��&#x0;D&#x0;]\}}|&#x0;f&#x0;|�t|&#x0;|<&#x0;qDW&#x0;5&#x0;Q&#x0;R&#x0;X&#x0;dS&#x0;)z$ Load all objects from file
+        �.db_{}.jsonN�r)        r&#x0;&#x0;&#x0;�formatr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�exists�open�json�loadr#&#x0;&#x0;&#x0;)�clsr&#x0;&#x0;&#x0;�        file_path�f�        objs_json�obj_idZobj_jsonr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�load_from_file<&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;
+
+
+zBase.load_from_filec&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;        &#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s^&#x0;&#x0;&#x0;|&#x0;j&#x0;}d�|�}i&#x0;}t|&#x0;��&#x0;D&#x0;]\}}|�d�||<&#x0;q t|d��}t�||�&#x0;W&#x0;5&#x0;Q&#x0;R&#x0;X&#x0;dS&#x0;)z" Save all objects to file
+        r)&#x0;&#x0;&#x0;T�wN)r&#x0;&#x0;&#x0;r+&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r#&#x0;&#x0;&#x0;r(&#x0;&#x0;&#x0;r-&#x0;&#x0;&#x0;r.&#x0;&#x0;&#x0;�dump)r0&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r1&#x0;&#x0;&#x0;r3&#x0;&#x0;&#x0;r4&#x0;&#x0;&#x0;�objr2&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�save_to_fileK&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;
+zBase.save_to_filec&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s.&#x0;&#x0;&#x0;|&#x0;j&#x0;j}t��&#x0;|&#x0;_|&#x0;t|&#x0;|&#x0;j<&#x0;|&#x0;j&#x0;��&#x0;&#x0;dS&#x0;)z Save current object
+        N)r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r
+&#x0;&#x0;&#x0;r9&#x0;&#x0;&#x0;�r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�saveX&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;
+z        Base.savec&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s6&#x0;&#x0;&#x0;|&#x0;j&#x0;j}t|&#x0;�|&#x0;j�dk        r2t|&#x0;|&#x0;j=&#x0;|&#x0;j&#x0;��&#x0;&#x0;dS&#x0;)z Remove object
+        N)r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r
+&#x0;&#x0;&#x0;r9&#x0;&#x0;&#x0;r:&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�remove`&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;zBase.remove)r&#x0;&#x0;&#x0;c&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;|&#x0;j&#x0;}tt|&#x0;��&#x0;�S&#x0;)z Count all objects
+        )r&#x0;&#x0;&#x0;�lenr&#x0;&#x0;&#x0;�keys)r0&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�counth&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;z
+Base.countc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;|&#x0;�&#x0;�&#x0;S&#x0;)z Return all objects
+        )�search)r0&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�allo&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;zBase.all)r
+&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;c&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;|&#x0;j&#x0;}t|&#x0;�|�S&#x0;)z! Return one object by ID
+        )r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;)r0&#x0;&#x0;&#x0;r
+&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;u&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;zBase.get)�
+attributesr&#x0;&#x0;&#x0;c&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;s(&#x0;&#x0;&#x0;|&#x0;j&#x0;}�&#x0;fdd�}tt|t|&#x0;��&#x0;��S&#x0;)z5 Search all objects with matching attributes
+        c&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;s:&#x0;&#x0;&#x0;t&#x0;�&#x0;�dkrdS&#x0;�&#x0;��&#x0;D&#x0;]\}}t|&#x0;|�|kr&#x0;dS&#x0;qdS&#x0;)Nr&#x0;&#x0;&#x0;TF)r=&#x0;&#x0;&#x0;r#&#x0;&#x0;&#x0;�getattr)r8&#x0;&#x0;&#x0;�k�v�rB&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�_search�&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;zBase.search.<locals>._search)r&#x0;&#x0;&#x0;�list�filterr&#x0;&#x0;&#x0;�values)r0&#x0;&#x0;&#x0;rB&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;rG&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;rF&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r@&#x0;&#x0;&#x0;|&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;zBase.searchN)F)r&#x0;&#x0;&#x0;�
+__module__�__qualname__�__doc__rH&#x0;&#x0;&#x0;�dictr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�boolr&#x0;&#x0;&#x0;r(&#x0;&#x0;&#x0;�classmethodr5&#x0;&#x0;&#x0;r9&#x0;&#x0;&#x0;r;&#x0;&#x0;&#x0;r<&#x0;&#x0;&#x0;�intr?&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;rA&#x0;&#x0;&#x0;r &#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r@&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;s$&#x0;&#x0;&#x0;         
+
+r&#x0;&#x0;&#x0;) rM&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�typingr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�osr&#x0;&#x0;&#x0;r.&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�<module>&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;

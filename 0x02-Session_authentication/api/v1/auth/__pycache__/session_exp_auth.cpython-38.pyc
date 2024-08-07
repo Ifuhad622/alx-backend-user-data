@@ -1,0 +1,20 @@
+U 
+&#x0;&#x0;&#x0;&#x0;�e`f�&#x0;&#x0;�&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;@&#x0;&#x0;&#x0;sH&#x0;&#x0;&#x0;d&#x0;Z&#x0;ddlZddlmZ&#x0;ddlmZmZ&#x0;ddlmZ&#x0;G&#x0;dd�&#x0;de�ZdS&#x0;)        z0API Module: Session auth with expiration module
+�&#x0;&#x0;&#x0;&#x0;N)�request)�datetime�        timedelta�&#x0;&#x0;&#x0;)�SessionAuthc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;sD&#x0;&#x0;&#x0;e&#x0;Zd&#x0;ZdZdd��&#x0;fdd�Zd
+�&#x0;fdd�        Zded�dd        �Z�&#x0;&#x0;ZS&#x0;)�SessionExpAuthz2Session authentication class with expiration.
+    N)�returnc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;s@&#x0;&#x0;&#x0;t&#x0;�&#x0;��&#x0;&#x0;ztt�dd��|&#x0;_W&#x0;n&#x0;tk
+r:&#x0;&#x0;&#x0;d|&#x0;_Y&#x0;nX&#x0;dS&#x0;)z3Initializes a new SessionExpAuth instance.
+        ZSESSION_DURATION�0r&#x0;&#x0;&#x0;N)�super�__init__�int�os�getenv�session_duration�        Exception)�self��        __class__�&#x0;�R/alx-backend-user-data/0x02-Session_authentication/api/v1/auth/session_exp_auth.pyr&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;s
+&#x0;&#x0;&#x0;&#x0;
+zSessionExpAuth.__init__c&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;s4&#x0;&#x0;&#x0;t&#x0;�&#x0;�|�}t|�tkrdS&#x0;|t��&#x0;d�|&#x0;j|<&#x0;|S&#x0;)z+Creates a session id for the user.
+        N)�user_id�
+created_at)r
+&#x0;&#x0;&#x0;�create_session�type�strr&#x0;&#x0;&#x0;�now�user_id_by_session_id)r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�
+session_idr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;�zSessionExpAuth.create_sessionc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;sj&#x0;&#x0;&#x0;||&#x0;j&#x0;krf|&#x0;j&#x0;|&#x0;}|&#x0;jdkr&|d&#x0;S&#x0;d|kr2dS&#x0;t��&#x0;}t|&#x0;jd�}|d&#x0;|&#x0;}||k&#x0;r^dS&#x0;|d&#x0;S&#x0;dS&#x0;)zVRetrieves the user id of the user associated with
+        a given session id.
+        r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;N)�seconds)r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;)r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;Zsession_dictZcur_timeZ        time_spanZexp_timer&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�user_id_for_session_id$&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;
+
+
+z%SessionExpAuth.user_id_for_session_id)N)N)        �__name__�
+__module__�__qualname__�__doc__r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;� __classcell__r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;        r&#x0;&#x0;&#x0;)        r#&#x0;&#x0;&#x0;r &#x0;&#x0;&#x0;�flaskr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�session_authr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�<module>&#x0;&#x0;&#x0;s
+&#x0;&#x0;&#x0;

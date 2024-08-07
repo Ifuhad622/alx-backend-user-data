@@ -1,0 +1,31 @@
+U 
+&#x0;&#x0;&#x0;&#x0;�A`fN&#x0;&#x0;�&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;@&#x0;&#x0;&#x0;sX&#x0;&#x0;&#x0;d&#x0;Z&#x0;ddlZddlmZmZ&#x0;ddlZddlZddlmZ&#x0;ddl        m
+Z
+&#x0;G&#x0;dd�&#x0;de
+�ZdS&#x0;)        z)Basic authentication module for the API.
+�&#x0;&#x0;&#x0;&#x0;N)�TypeVar�Tuple)�User�&#x0;&#x0;&#x0;)�Authc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;@&#x0;&#x0;&#x0;sr&#x0;&#x0;&#x0;e&#x0;Zd&#x0;ZdZeed�dd�Zeed�dd�Zeeeef&#x0;d�d        d
+�Zeee        d�d�d d�Z
+de        d�d�dd�ZdS&#x0;)�        BasicAuthz Basic authentication class.
+    )�authorization_header�returnc&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s6&#x0;&#x0;&#x0;t&#x0;|�tkr2d}t�||��&#x0;�}|dk        r2|�d�S&#x0;dS&#x0;)zaExtracts the Base64 part of the Authorization header
+        for a Basic Authentication.
+        zBasic (?P<token>.+)NZtoken��type�str�re�        fullmatch�strip�group)�selfr&#x0;&#x0;&#x0;�pattern�field_match�&#x0;r&#x0;&#x0;&#x0;�L/alx-backend-user-data/0x02-Session_authentication/api/v1/auth/basic_auth.py�#extract_base64_authorization_header&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;
+z-BasicAuth.extract_base64_authorization_header)�base64_authorization_headerr        &#x0;&#x0;&#x0;c&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;        &#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;sH&#x0;&#x0;&#x0;t&#x0;|�tkrDztj|dd�}|�d�W&#x0;S&#x0;&#x0;tjtfk
+rB&#x0;&#x0;&#x0;Y&#x0;dS&#x0;X&#x0;dS&#x0;)z?Task 8: Decodes a base64-encoded authorization header.
+        T)�validatezutf-8N)r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�base64�        b64decode�decode�binascii�Error�UnicodeDecodeError)r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�resr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�"decode_base64_authorization_header&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;�z,BasicAuth.decode_base64_authorization_header)�#decoded_base64_authorization_headerr        &#x0;&#x0;&#x0;c&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;sH&#x0;&#x0;&#x0;t&#x0;|�tkrDd}t�||��&#x0;�}|dk        rD|�d�}|�d�}||fS&#x0;dS&#x0;)z�Task 9: Extracts user credentials from a base64-decoded
+        authorization header that uses the Basic authentication flow.
+        z (?P<user>[^:]+):(?P<password>.+)N�user�password)NNr
+&#x0;&#x0;&#x0;)r&#x0;&#x0;&#x0;r!&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r"&#x0;&#x0;&#x0;r#&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�extract_user_credentials-&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;�
+
+z"BasicAuth.extract_user_credentialsr&#x0;&#x0;&#x0;)�
+user_email�user_pwdr        &#x0;&#x0;&#x0;c&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;sl&#x0;&#x0;&#x0;t&#x0;|�tkrht&#x0;|�tkrhzt�d|i�}W&#x0;n&#x0;tk
+r@&#x0;&#x0;&#x0;Y&#x0;dS&#x0;X&#x0;t|�dkrRdS&#x0;|d&#x0;�|�rh|d&#x0;S&#x0;dS&#x0;)zZTask 10: Retrieves a user based on the user's
+        authentication credentials.
+        �emailNr&#x0;&#x0;&#x0;)r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�search�        Exception�lenZis_valid_password)r&#x0;&#x0;&#x0;r%&#x0;&#x0;&#x0;r&&#x0;&#x0;&#x0;Zusersr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�user_object_from_credentials@&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;z&BasicAuth.user_object_from_credentialsN)r        &#x0;&#x0;&#x0;c&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;&#x0;C&#x0;&#x0;&#x0;s8&#x0;&#x0;&#x0;|&#x0;�&#x0;|�}|&#x0;�|�}|&#x0;�|�}|&#x0;�|�\}}|&#x0;�||�S&#x0;)z4Task 11: Retrieves the user from a request.
+        )r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r &#x0;&#x0;&#x0;r$&#x0;&#x0;&#x0;r+&#x0;&#x0;&#x0;)r&#x0;&#x0;&#x0;ZrequestZauth_headerZb64_auth_tokenZ
+auth_tokenr'&#x0;&#x0;&#x0;r#&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�current_userR&#x0;&#x0;&#x0;s
+&#x0;&#x0;&#x0;&#x0;
+
+
+zBasicAuth.current_user)N)�__name__�
+__module__�__qualname__�__doc__r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r &#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r$&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r+&#x0;&#x0;&#x0;r,&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0; &#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;&#x0;��
+�&#x0;�r&#x0;&#x0;&#x0;)r0&#x0;&#x0;&#x0;r &#x0;&#x0;&#x0;�typingr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�models.userr&#x0;&#x0;&#x0;�authr&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;r&#x0;&#x0;&#x0;�<module>&#x0;&#x0;&#x0;s&#x0;&#x0;&#x0;
